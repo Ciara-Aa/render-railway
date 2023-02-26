@@ -585,6 +585,15 @@ def load_config():
     NAME_FONT = environ.get('NAME_FONT', '')
     if len(NAME_FONT) == 0: 
         NAME_FONT = 'code'
+        
+    FSMAIL = environ.get('FSMAIL', '')
+    FSPASS = environ.get('FSPASS', '')
+    if len(FSMAIL) == 0 or len(FSPASS) == 0:
+        FSMAIL = None
+        FSPASS = None 
+    FSLIMIT = environ.get('FSLIMIT', '')
+    if len(FSLIMIT) == 0:
+        FSMAIL = 20
 
     CAPTION_FONT = environ.get('CAPTION_FONT', '')
     if len(CAPTION_FONT) == 0:  
